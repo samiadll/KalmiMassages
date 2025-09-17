@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil - Kalmi Massage</title>
+    <!-- Styles globaux (menu + footer) -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Styles spécifiques à l’accueil -->
+    <link rel="stylesheet" href="accueil.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Checkbox caché -->
+      <input type="checkbox" id="menu-toggle" />
+
+      <!-- Bouton burger -->
+      <label for="menu-toggle" class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <header class="header">
+        <input type="checkbox" id="menu-toggle" />
+        <label
+          for="menu-toggle"
+          class="burger"
+          aria-label="Ouvrir le menu"
+          role="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav>
+          <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="presta.html">Les Prestations</a></li>
+            <li><a href="bienfaits.html">Les Bienfaits</a></li>
+            <li><a href="domicile.html">À Domicile</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Navigation -->
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="presta.html">Les Prestations</a></li>
+          <li><a href="bienfaits.html">Les Bienfaits</a></li>
+          <li><a href="domicile.html">À Domicile</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="accueil" class="hero">
+      <div class="hero-image">
+        <img src="logo.png" alt="Massage bien-être" />
+      </div>
+      <a href="presta.html" class="cta">Découvrir les prestations</a>
+    </section>
+
+    <!-- Bienvenue -->
+    <section id="bienvenue" class="bienvenue">
+      <div class="bienvenue-container">
+        <div class="bienvenue-texte">
+          <h2>
+            Bienvenue chez
+            <span class="accent">Kalmi Massages</span>
+          </h2>
+          <p>
+            Coucou, moi c’est Zoé. Bienvenue chez Kalmi Massages. J’ai créé cet
+            espace pour vous offrir des moments de détente et de bien-être, que
+            ce soit à domicile ou chez moi.
+          </p>
+          <a href="presta.html" class="btn-orange">Découvrir</a>
+        </div>
+        <div class="bienvenue-images">
+          <img src="bienvenue1.jpg" alt="Massage détente" />
+          <img src="bienvenue2.jpg" alt="Massage relaxation" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro Massage -->
+    <section id="intro" class="intro">
+      <div class="intro-container">
+        <p>
+          Mes massages sont pensés pour vous aider à relâcher la pression,
+          prendre soin de vous et repartir plus légère, apaisée et ressourcée.
+          Ici, pas de stress, juste une bulle de douceur rien que pour vous.
+        </p>
+        <a href="presta.html" class="btn-orange">Découvrir</a>
+      </div>
+    </section>
+
+    <section class="horaires">
+      <h2>📅 Les Horaires</h2>
+      <ul>
+        <li><strong>Lundi & Mercredi :</strong> 19h – 20h30</li>
+        <li><strong>Samedi :</strong> 8h30 – 16h</li>
+      </ul>
+      <p class="exception">
+        ⚡ Exception possible pour les massages à domicile
+      </p>
+    </section>
+
+    <!-- Prestations -->
+    <section id="prestations" class="prestations">
+      <h2>Les <span class="accent">Massages</span></h2>
+      <div class="prestations-list">
+        <div class="prestation">
+          <img src="nosmassages1.jpg" alt="Massage Anti-Stress" />
+          <div>
+            <p class="titre">Massage Anti-Stress</p>
+            <p class="prix">50€</p>
+          </div>
+        </div>
+        <div class="prestation special">
+          <img src="nosmassages3.jpg" alt="Massage Signature" />
+          <div>
+            <p class="titre">Massage Signature</p>
+            <p class="prix">65€ à 80€</p>
+          </div>
+        </div>
+        <div class="prestation">
+          <img src="nosmassages4.jpg" alt="Relaxant doux" />
+          <div>
+            <p class="titre">Relaxant doux</p>
+            <p class="prix">65€</p>
+          </div>
+        </div>
+        <div class="prestation">
+          <img src="nosmassages6.jpg" alt="Relaxant tonique" />
+          <div>
+            <p class="titre">Relaxant tonique</p>
+            <p class="prix">65€</p>
+          </div>
+        </div>
+        <div class="prestation">
+          <img src="nosmassages7.jpg" alt="Massage crânien" />
+          <div>
+            <p class="titre">Massage crânien</p>
+            <p class="prix">35€</p>
+          </div>
+        </div>
+        <div class="prestation">
+          <img src="nosmassages8.jpg" alt="Massage dos" />
+          <div>
+            <p class="titre">Massage dos</p>
+            <p class="prix">35€</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bienfaits -->
+    <section id="bienfaits" class="bienfaits">
+      <h2>Les Bienfaits de <span class="accent">Kalmi Massages</span></h2>
+      <div class="bienfaits-grid">
+        <div class="bienfait">
+          <div class="bienfait-img">
+            <img src="pictogramme1.png" alt="Réduit le stress" />
+          </div>
+          <p>Réduit le stress et détend</p>
+        </div>
+        <div class="bienfait">
+          <div class="bienfait-img">
+            <img src="pictogramme2.png" alt="Améliore la circulation" />
+          </div>
+          <p>Améliore la circulation</p>
+        </div>
+        <div class="bienfait">
+          <div class="bienfait-img">
+            <img src="pictogramme3.png" alt="Soulage les douleurs" />
+          </div>
+          <p>Soulage les douleurs musculaires</p>
+        </div>
+      </div>
+      <div class="btn-center">
+        <a href="bienfaits.html" class="btn-orange">Voir plus</a>
+      </div>
+    </section>
+
+    <!-- Domicile -->
+    <section id="domicile" class="domicile">
+      <div class="domicile-container">
+        <div class="domicile-image">
+          <img src="adomiciles.jpg" alt="Massage à domicile" />
+        </div>
+        <div class="domicile-text">
+          <h2>Massages à domicile</h2>
+          <p>
+            Profitez d’un moment de détente sans bouger de chez vous. Je me
+            déplace avec tout le matériel nécessaire pour vous offrir une
+            expérience de massage unique, dans le confort de votre foyer.
+          </p>
+          <a href="domicile.html" class="btn-white">Réserver à domicile</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2025 Kalmi Massage - Tous droits réservés</p>
+    </footer>
+  </body>
+</html>

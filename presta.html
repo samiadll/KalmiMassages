@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nos Prestations - Kalmi Massage</title>
+    <!-- Styles globaux (menu + footer) -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Styles spécifiques à la page -->
+    <link rel="stylesheet" href="presta.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Checkbox caché pour le burger -->
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <header class="header">
+        <!-- checkbox caché (doit être AVANT le label et avant le nav pour les sélecteurs CSS) -->
+        <input type="checkbox" id="menu-toggle" />
+
+        <!-- icône burger -->
+        <label
+          for="menu-toggle"
+          class="burger"
+          aria-label="Ouvrir le menu"
+          role="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <!-- navigation -->
+        <nav>
+          <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="presta.html">Les Prestations</a></li>
+            <li><a href="bienfaits.html">Les Bienfaits</a></li>
+            <li><a href="domicile.html">À Domicile</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="presta.html" class="active">Les Prestations</a></li>
+          <li><a href="bienfaits.html">Les Bienfaits</a></li>
+          <li><a href="domicile.html">À Domicile</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Intro prestations -->
+    <section class="intro-presta">
+      <div class="intro-presta-container">
+        <p>
+          Offrez-vous une parenthèse de douceur. Nos prestations sont là pour
+          apaiser le corps, libérer les tensions et vous reconnecter à
+          l’essentiel.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section Prestations -->
+    <section id="prestations" class="prestations">
+      <h2>Découvrez les <span class="accent">Massages</span></h2>
+
+      <div class="prestations-grid">
+        <!-- Massage relaxant ciblé -->
+        <div class="prestation">
+          <img src="nosmassages1.jpg" alt="Massage relaxant ciblé" />
+          <h3>Massage relaxant ciblé - 30 min</h3>
+          <p>Un moment court mais efficace pour délier le dos et la nuque.</p>
+          <p class="prix">35 €</p>
+          <a
+            href="https://www.planity.com/kalmi-massages-31400-toulouse"
+            target="_blank"
+            class="btn-orange"
+            >Réserver</a
+          >
+        </div>
+
+        <!-- Massage crânien et visage -->
+        <div class="prestation">
+          <img src="nosmassages2.jpg" alt="Massage crânien et visage" />
+          <h3>Massage crânien & visage - 30 min</h3>
+          <p>Un instant apaisant pour relâcher la tête et le mental.</p>
+          <p class="prix">35 €</p>
+          <a
+            href="https://www.planity.com/kalmi-massages-31400-toulouse"
+            target="_blank"
+            class="btn-orange"
+            >Réserver</a
+          >
+        </div>
+
+        <!-- Massage Anti-Stress -->
+        <div class="prestation">
+          <img src="nosmassages3.jpg" alt="Massage Anti-Stress" />
+          <h3>Massage Anti-Stress - 45 min</h3>
+          <p>
+            Un soin complet qui libère les tensions et invite à la sérénité.
+          </p>
+          <p class="prix">50 €</p>
+          <a
+            href="https://www.planity.com/kalmi-massages-31400-toulouse"
+            target="_blank"
+            class="btn-orange"
+            >Réserver</a
+          >
+        </div>
+
+        <!-- Massage Signature -->
+        <div class="prestation special">
+          <img src="nosmassages4.jpg" alt="Massage Signature" />
+          <h3>Massage Signature - 1h</h3>
+          <p>Une expérience unique pour détendre le corps et l’esprit.</p>
+          <p class="prix">65 €</p>
+          <a
+            href="https://www.planity.com/kalmi-massages-31400-toulouse"
+            target="_blank"
+            class="btn-orange"
+            >Réserver</a
+          >
+        </div>
+
+        <!-- Massage Signature profond -->
+        <div class="prestation special">
+          <img src="nosmassages5.jpg" alt="Massage Signature profond" />
+          <h3>Massage Signature profond - 1h15</h3>
+          <p>Une immersion prolongée pour un lâcher-prise total.</p>
+          <p class="prix">80 €</p>
+          <a
+            href="https://www.planity.com/kalmi-massages-31400-toulouse"
+            target="_blank"
+            class="btn-orange"
+            >Réserver</a
+          >
+        </div>
+
+        <!-- Massage à domicile -->
+        <div class="prestation">
+          <img src="nosmassages6.jpg" alt="Massage à domicile" />
+          <h3>Massage à domicile</h3>
+          <p>Le bien-être vient directement à vous, sans contrainte.</p>
+          <p class="prix">Sur devis</p>
+          <a
+            href="https://www.planity.com/kalmi-massages-31400-toulouse"
+            target="_blank"
+            class="btn-orange"
+            >Réserver</a
+          >
+        </div>
+
+        <!-- Forfait massage 45 min -->
+        <div class="prestation">
+          <img src="nosmassages8.jpg" alt="Forfait massage 45 min" />
+          <h3>Forfait massage 45 min</h3>
+          <p>
+            Un soin régulier de 45 min pour garder la sérénité au quotidien.
+          </p>
+          <p class="prix">De 45 € à 58 €</p>
+          <a
+            href="https://www.planity.com/kalmi-massages-31400-toulouse"
+            target="_blank"
+            class="btn-orange"
+            >Réserver</a
+          >
+        </div>
+
+        <!-- Forfait massage 1h -->
+        <div class="prestation">
+          <img src="nosmassages9.jpg" alt="Forfait massage 1h" />
+          <h3>Forfait massage 1h</h3>
+          <p>
+            Un moment d’équilibre et de bien-être prolongé, valable toute
+            l’année.
+          </p>
+          <p class="prix">De 58 € à 73 €</p>
+          <a
+            href="https://www.planity.com/kalmi-massages-31400-toulouse"
+            target="_blank"
+            class="btn-orange"
+            >Réserver</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Kalmi Massage - Tous droits réservés</p>
+    </footer>
+  </body>
+</html>

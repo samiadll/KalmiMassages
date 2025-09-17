@@ -1,0 +1,392 @@
+/* Reset simple */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --rose: #f8bfc5;
+  --rose-2: #fdc9d2;
+  --accent: #a6243d;
+  --orange-border: #f5a623;
+  --muted: #555;
+  --bg: #fff;
+}
+
+/* Global body */
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: #222;
+  line-height: 1.5;
+}
+
+/* Header - identique pour toutes les pages */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, var(--rose) 0%, var(--rose-2) 100%);
+  padding: 1rem 1.5rem;
+  z-index: 50;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  list-style: none;
+}
+.menu a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+.menu a:hover::after,
+.menu a.active::after {
+  width: 100%;
+}
+.menu a:hover {
+  color: #7d1528;
+}
+
+/* Page container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Hero / Intro */
+.domicile-hero {
+  padding: 6.5rem 0 3rem; /* espace pour le header fixe */
+  background: linear-gradient(180deg, var(--rose-2), #fff);
+  animation: fadeIn 1s ease;
+}
+.domicile-hero .container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.hero-text {
+  flex: 1 1 420px;
+  min-width: 280px;
+}
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+  font-family: "Playfair Display", serif;
+}
+.hero-text .accent {
+  color: var(--accent);
+  font-style: italic;
+}
+.lead {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+.small {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.hero-image {
+  flex: 0 0 360px;
+  display: flex;
+  justify-content: center;
+}
+.hero-image img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Book button */
+.btn-book {
+  display: inline-block;
+  padding: 0.65rem 1.1rem;
+  border-radius: 40px;
+  border: 2px solid var(--orange-border);
+  color: var(--orange-border);
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background: transparent;
+}
+.btn-book:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+.btn-book.large {
+  padding: 0.9rem 1.6rem;
+  font-weight: 600;
+}
+
+/* Section common */
+.section {
+  padding: 2.5rem 0;
+}
+.section h2 {
+  text-align: center;
+  margin-bottom: 0.6rem;
+  font-size: 1.7rem;
+  font-family: "Playfair Display", serif;
+}
+.section .intro {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+}
+
+/* Forfaits table */
+.table-wrap {
+  overflow: auto;
+  margin-top: 1rem;
+}
+.forfait-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(166, 36, 61, 0.06);
+}
+.forfait-table thead th {
+  text-align: left;
+  padding: 14px 16px;
+  background: linear-gradient(180deg, #fff, #fff);
+  color: var(--accent);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.forfait-table tbody td {
+  padding: 14px 16px;
+  color: #333;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+.forfait-table tbody tr:nth-child(even) {
+  background: #fffafc;
+}
+
+/* Actions below table */
+.forfait-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-top: 1rem;
+  flex-direction: column;
+  text-align: center;
+}
+.forfait-actions .note {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 0.6rem;
+}
+
+/* Small grid cards (zone/frais/horaires/address) */
+.small-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 1rem;
+}
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+.card h3 {
+  margin-bottom: 0.4rem;
+  color: var(--accent);
+}
+.card ul {
+  margin-top: 0.4rem;
+  color: var(--muted);
+}
+.card p {
+  color: var(--muted);
+}
+
+/* How it works */
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 1rem;
+}
+.how-step {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+.how-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+.how-step h4 {
+  margin-bottom: 0.4rem;
+  color: var(--accent);
+}
+
+/* CTA final */
+.centered {
+  text-align: center;
+}
+.final-cta {
+  padding: 2.5rem 0 4rem;
+  background: linear-gradient(180deg, #fff, #fff0f5);
+}
+
+/* Footer */
+.footer {
+  background: var(--rose);
+  padding: 16px 0;
+  text-align: center;
+  color: var(--accent);
+  margin-top: 20px;
+}
+
+/* Rounded images used in page (if any) */
+img {
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+img.rounded {
+  border-radius: 14px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .forfait-table {
+    min-width: 700px;
+  }
+  .how-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .small-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-image {
+    order: -1;
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 1rem;
+  }
+  .hero-text {
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .forfait-table {
+    min-width: 600px;
+    font-size: 0.95rem;
+  }
+  .how-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-image img {
+    border-radius: 14px;
+  }
+  .menu {
+    gap: 1rem;
+  }
+}
+
+/* --- Effets sans JS pour la page À Domicile --- */
+
+/* Animation à l'apparition (au chargement de la page) */
+.domicile-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+.domicile-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.domicile-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.domicile-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.domicile-card:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover sur les cartes */
+.domicile-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.domicile-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Hover sur les boutons */
+.domicile-card button {
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.domicile-card button:hover {
+  background: #ff6b81;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Titre avec soulignement animé */
+.domicile-title {
+  position: relative;
+  display: inline-block;
+}
+.domicile-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 3px;
+  background: #ff6b81;
+  transition: width 0.5s ease;
+}
+.domicile-title:hover::after {
+  width: 100%;
+}

@@ -1,0 +1,163 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* --- MENU / BURGER (coller à la place des anciennes règles menu/burger/mobile) --- */
+
+/* variables (si pas déjà définies dans :root) */
+:root {
+  --rose: #f8bfc5;
+  --rose-2: #f4a3ab;
+  --accent: #a6243d;
+}
+
+/* Header (global) */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, var(--rose) 0%, var(--rose-2) 100%);
+  padding: 1rem 1.5rem;
+  z-index: 1500; /* header sous le menu overlay */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Desktop menu */
+nav .menu {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  align-items: center;
+}
+nav .menu a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+  position: relative;
+}
+
+/* Burger icon (hidden desktop) */
+.burger {
+  display: none;
+  width: 28px;
+  height: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 2100; /* au-dessus du header */
+}
+.burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+}
+
+/* Checkbox (contrôle sans JS) */
+#menu-toggle {
+  display: none;
+}
+
+/* Mobile overlay menu - remplace tout ancien comportement (right: -100% / width:70%) */
+@media (max-width: 768px) {
+  .burger { display: flex; }
+
+  /* overlay full-screen */
+  nav .menu {
+    position: fixed;
+    inset: 0;                /* top:0; right:0; bottom:0; left:0; */
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, var(--rose), var(--rose-2));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transform: translateX(100%); /* caché à droite par défaut */
+    transition: transform 0.35s ease;
+    z-index: 2000;            /* au-dessus de tout */
+    padding-top: 3.5rem;      /* laisse la croix visible sous le header */
+  }
+
+  /* ouvrir le menu */
+  #menu-toggle:checked ~ nav .menu {
+    transform: translateX(0);
+  }
+
+  /* animation croix */
+  #menu-toggle:checked + .burger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #menu-toggle:checked + .burger span:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle:checked + .burger span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* rend la croix blanche quand ouvert (si fond rose) */
+  #menu-toggle:checked + .burger span {
+    background: #fff;
+  }
+
+  /* look des liens dans overlay */
+  nav .menu a {
+    font-size: 1.15rem;
+    color: var(--accent);
+  }
+}
+/* Empêche le site de bouger horizontalement */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+  /* Effet croix quand actif */
+  #menu-toggle:checked + .burger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #menu-toggle:checked + .burger span:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle:checked + .burger span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Burger blanc quand actif (sur fond rose du menu) */
+  #menu-toggle:checked + .burger span {
+    background: #fff;
+  }
+}
+
+/* Footer commun */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #f8bfc5;
+  color: #a6243d;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,221 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --rose: #f8bfc5;
+  --rose-2: #fdc9d2;
+  --accent: #a6243d;
+}
+
+/* Global */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Header - identique pour toutes les pages */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, var(--rose) 0%, var(--rose-2) 100%);
+  padding: 1rem 1.5rem;
+  z-index: 50;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  list-style: none;
+}
+.menu a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+.menu a:hover::after,
+.menu a.active::after {
+  width: 100%;
+}
+.menu a:hover {
+  color: #7d1528;
+}
+
+/* Intro */
+.bienfaits-intro {
+  text-align: center;
+  padding: 6.5rem 20px 30px; /* espace pour le menu fixe */
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+.bienfaits-intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  animation: slideIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+.bienfaits-intro h1 span {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.bienfaits-intro p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #555;
+  animation: fadeIn 1.5s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+
+/* Bienfaits en cartes */
+.bienfaits-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 50px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.bienfait-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bienfait-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.bienfait-card img {
+  display: block; /* force bloc */
+  margin: 0 auto 15px; /* centre horizontalement */
+  max-width: 120px; /* taille uniforme */
+  height: 120px; /* carré */
+  object-fit: cover; /* évite déformations */
+  border-radius: 50%; /* cercle */
+  background: #fff5f7;
+  padding: 10px;
+}
+
+.bienfait-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.bienfait-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Avis clients */
+.avis {
+  padding: 50px 20px;
+  text-align: center;
+  background: #fff5f7;
+}
+
+.avis h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.avis-cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.avis-card {
+  flex: 0 0 250px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+  background: var(--rose);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: var(--accent);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bienfait-card img {
+    max-width: 90px;
+    height: 90px;
+  }
+  nav ul {
+    gap: 1rem;
+  }
+}
