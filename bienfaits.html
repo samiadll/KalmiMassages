@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les Bienfaits du Massage</title>
+    <!-- Styles globaux (menu + footer) -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Styles spécifiques à cette page -->
+    <link rel="stylesheet" href="bienfaits.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Checkbox caché pour activer le burger -->
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <header class="header">
+        <!-- checkbox caché (doit être AVANT le label et avant le nav pour les sélecteurs CSS) -->
+        <input type="checkbox" id="menu-toggle" />
+
+        <!-- icône burger -->
+        <label
+          for="menu-toggle"
+          class="burger"
+          aria-label="Ouvrir le menu"
+          role="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <!-- navigation -->
+        <nav>
+          <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="presta.html">Les Prestations</a></li>
+            <li><a href="bienfaits.html">Les Bienfaits</a></li>
+            <li><a href="domicile.html">À Domicile</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="presta.html">Les Prestations</a></li>
+          <li><a href="bienfaits.html" class="active">Les Bienfaits</a></li>
+          <li><a href="domicile.html">À Domicile</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Introduction -->
+    <header class="bienfaits-intro">
+      <h1>Les <span>Bienfaits</span> du massage</h1>
+      <p>
+        Le massage est bien plus qu’un moment de détente : il agit sur le corps
+        et l’esprit pour libérer les tensions, améliorer la circulation et
+        retrouver une énergie équilibrée.
+      </p>
+    </header>
+
+    <!-- Section Bienfaits en cartes -->
+    <section class="bienfaits-cards">
+      <div class="bienfait-card">
+        <img src="pictogramme1.png" alt="Réduction du stress" />
+        <h2>Réduction du stress</h2>
+        <p>Apaise le mental et invite au lâcher-prise.</p>
+      </div>
+
+      <div class="bienfait-card">
+        <img src="pictogramme2.png" alt="Soulagement des tensions" />
+        <h2>Soulagement des tensions</h2>
+        <p>Détend les muscles, relâche le dos, les épaules et la nuque.</p>
+      </div>
+
+      <div class="bienfait-card">
+        <img src="pictogramme3.png" alt="Amélioration de la circulation" />
+        <h2>Amélioration de la circulation</h2>
+        <p>Favorise un meilleur flux sanguin et lymphatique.</p>
+      </div>
+
+      <div class="bienfait-card">
+        <img src="pictogramme4.png" alt="Sommeil réparateur" />
+        <h2>Sommeil réparateur</h2>
+        <p>Aide à mieux dormir et à retrouver une énergie naturelle.</p>
+      </div>
+    </section>
+
+    <!-- Avis clients -->
+    <section class="avis">
+      <h2>Ils en parlent mieux que nous ✨</h2>
+      <div class="avis-cards">
+        <div class="avis-card">
+          "J’ai dormi comme un bébé après la séance 😍"
+        </div>
+        <div class="avis-card">
+          "Un grand merci, plus aucune tension, je suis détendue 💕"
+        </div>
+        <div class="avis-card">
+          "Professionnelle et douce, un vrai moment de bonheur 🌸"
+        </div>
+        <div class="avis-card">"Super expérience, je recommande à 100% 🙌"</div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2025 Kalmi Massage – Tous droits réservés</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,582 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hero */
+.hero {
+  background: #fdc9d2;
+  padding: 8rem 1rem 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-image {
+  width: 320px;
+  height: 320px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cta {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  border: 2px solid #f5a623;
+  color: #f5a623;
+  border-radius: 50px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta:hover {
+  background: #ffe2c6;
+}
+
+/* Section Bienvenue */
+.bienvenue {
+  background: #fff0f5;
+  padding: 4rem 1rem;
+}
+
+.bienvenue-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .bienvenue-container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.bienvenue-texte {
+  flex: 1;
+}
+
+.bienvenue-texte h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+.bienvenue-texte .accent {
+  color: #e75480;
+  font-style: italic;
+}
+
+.bienvenue-texte p {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.btn-orange {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #f5a623;
+  color: #f5a623;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-orange:hover {
+  background: #ffe2c6;
+}
+
+.bienvenue-images {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.bienvenue-images img {
+  width: 260px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Intro Massage */
+.intro {
+  background: #fff0f5;
+  padding: 4rem 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.intro-container {
+  max-width: 800px;
+  margin: auto;
+  background: #ffe4ec;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.intro-container p {
+  color: #555;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Section Prestations */
+.prestations {
+  background: #fff;
+  padding: 4rem 1rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.prestations h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.prestations h2 .accent {
+  color: #a6243d;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Liste scrollable */
+.prestations-list {
+  max-width: 400px;
+  margin: auto;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Chaque prestation */
+.prestation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  border: 2px solid #f8bfc5;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.prestation:hover {
+  transform: scale(1.02);
+}
+
+.prestation img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.prestation .titre {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.prestation .prix {
+  color: #a6243d;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+/* Massage spécial (signature) */
+.prestation.special {
+  background: #f8bfc5;
+  border: 2px solid #a6243d;
+}
+
+/* Section Bienfaits */
+.bienfaits {
+  background: #fff;
+  padding: 4rem 1rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.bienfaits h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  font-family: "Playfair Display", serif;
+}
+
+.bienfaits h2 .accent {
+  color: #e75480;
+  font-style: italic;
+}
+
+.bienfaits-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .bienfaits-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.bienfait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.bienfait-img {
+  width: 130px;
+  height: 130px;
+  background: #f3f3f3;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.bienfait-img:hover {
+  transform: scale(1.05);
+}
+
+.bienfait-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bienfait p {
+  margin-top: 1rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Bouton centré */
+.btn-center {
+  margin-top: 2rem;
+}
+
+/* Section Domicile */
+.domicile {
+  background: #fff;
+  padding: 4rem 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.domicile-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .domicile-container {
+    flex-direction: row;
+  }
+}
+
+.domicile-image {
+  flex: 1;
+}
+
+.domicile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.domicile-text {
+  flex: 1;
+  background: #a6243d;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.domicile-text h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+.domicile-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.btn-white {
+  display: inline-block;
+  background: white;
+  color: #a6243d;
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn-white:hover {
+  background: #ffe2e9;
+}
+
+/* Animations globales */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Application des animations sur sections */
+.hero {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero-image {
+  animation: zoomIn 1.5s ease-in-out;
+}
+
+.bienvenue {
+  animation: fadeIn 1.3s ease-in-out;
+}
+
+.bienvenue-texte {
+  animation: slideInLeft 1.3s ease-in-out;
+}
+
+.bienvenue-images {
+  animation: slideInRight 1.3s ease-in-out;
+}
+
+.intro-container {
+  animation: zoomIn 1.5s ease-in-out;
+}
+
+.prestations {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.prestation:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bienfaits {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.bienfait-img:hover {
+  transform: scale(1.1);
+}
+
+.domicile-container {
+  animation: zoomIn 1.5s ease-in-out;
+}
+
+.btn-orange:hover,
+.cta:hover,
+.btn-white:hover {
+  transform: scale(1.05);
+}
+
+/* Effet doux sur les titres */
+h1,
+h2,
+h3 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+h1::after,
+h2::after,
+h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: #f5a623;
+  animation: slideUnderline 2s ease forwards;
+}
+
+@keyframes slideUnderline {
+  to {
+    left: 0;
+  }
+}
+
+/* Images avec zoom progressif au hover */
+img {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Boutons avec effet de pulsation */
+.btn-orange,
+.cta,
+.btn-white {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-orange:hover,
+.cta:hover,
+.btn-white:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Effet subtil sur les cartes/prestations */
+.prestation {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.prestation:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ---- FIX HEADER TO ALWAYS BE VISIBLE ---- */
+.header {
+  background: linear-gradient(90deg, #f8bfc5 0%, #f4a3ab 100%) !important;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero,
+.bienvenue,
+.intro,
+.prestations,
+.bienfaits,
+.domicile {
+  position: relative;
+  z-index: 1;
+}
+/* Section Horaires */
+.horaires {
+  background: #fce4e8; /* rose clair */
+  border: 2px solid #f8bfc5;
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.8s ease;
+}
+
+.horaires h2 {
+  color: #a6243d;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.horaires ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.horaires li {
+  font-size: 1.1rem;
+  color: #444;
+  margin: 0.5rem 0;
+}
+
+.horaires li strong {
+  color: #a6243d;
+}
+
+.horaires .exception {
+  font-size: 0.95rem;
+  color: #a6243d;
+  margin-top: 1rem;
+  font-style: italic;
+}

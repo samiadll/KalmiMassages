@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>À domicile - Kalmi Massage</title>
+    <!-- Styles globaux (menu + footer) -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Styles spécifiques à la page -->
+    <link rel="stylesheet" href="domicile.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Checkbox caché pour activer le burger -->
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <header class="header">
+        <!-- checkbox caché (doit être AVANT le label et avant le nav pour les sélecteurs CSS) -->
+        <input type="checkbox" id="menu-toggle" />
+
+        <!-- icône burger -->
+        <label
+          for="menu-toggle"
+          class="burger"
+          aria-label="Ouvrir le menu"
+          role="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <!-- navigation -->
+        <nav>
+          <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="presta.html">Les Prestations</a></li>
+            <li><a href="bienfaits.html">Les Bienfaits</a></li>
+            <li><a href="domicile.html">À Domicile</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="presta.html">Nos Prestations</a></li>
+          <li><a href="bienfaits.html">Les Bienfaits</a></li>
+          <li><a href="domicile.html" class="active">À Domicile</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Intro -->
+      <section class="domicile-hero">
+        <div class="container">
+          <div class="hero-text domicile-card">
+            <h1>Massages <span class="accent">à domicile</span></h1>
+            <p class="lead">
+              Profitez d’un moment de détente absolue sans bouger de chez vous.
+              Je viens avec tout le matériel (table, huiles, ambiance) — vous
+              n’avez qu’à vous laisser aller.
+            </p>
+            <p class="small">Réserver → ouvre Planity dans un nouvel onglet</p>
+            <a
+              href="https://www.planity.com/kalmi-massages-31400-toulouse"
+              class="btn-book"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Réserver sur Planity</a
+            >
+          </div>
+          <div class="hero-image domicile-card">
+            <img src="adomiciles.jpg" alt="Massage à domicile" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Forfaits (table) -->
+      <section class="forfaits section">
+        <div class="container domicile-card">
+          <h2>Forfaits & tarifs</h2>
+          <p class="intro">
+            Packs disponibles pour le cabinet ou à domicile — économies et suivi
+            régulier.
+          </p>
+
+          <div class="table-wrap">
+            <table class="forfait-table" aria-label="Tableau des forfaits">
+              <thead>
+                <tr>
+                  <th>Durée</th>
+                  <th>Pack</th>
+                  <th>Cabinet (prix total)</th>
+                  <th>Prix / séance (cabinet)</th>
+                  <th>À domicile (prix total)</th>
+                  <th>Prix / séance (domicile)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>45 min</td>
+                  <td>3</td>
+                  <td>140 €</td>
+                  <td>≈ 46,7 €</td>
+                  <td>175 €</td>
+                  <td>≈ 58,3 €</td>
+                </tr>
+                <tr>
+                  <td>45 min</td>
+                  <td>5</td>
+                  <td>225 €</td>
+                  <td>45 €</td>
+                  <td>290 €</td>
+                  <td>58 €</td>
+                </tr>
+                <tr>
+                  <td>1 h</td>
+                  <td>3</td>
+                  <td>180 €</td>
+                  <td>60 €</td>
+                  <td>220 €</td>
+                  <td>≈ 73,3 €</td>
+                </tr>
+                <tr>
+                  <td>1 h</td>
+                  <td>5</td>
+                  <td>290 €</td>
+                  <td>58 €</td>
+                  <td>365 €</td>
+                  <td>73 €</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="forfait-actions">
+            <a
+              href="https://www.planity.com/kalmi-massages-31400-toulouse"
+              class="btn-book"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Réserver un massage à domicile</a
+            >
+            <p class="note">
+              Forfaits valables 1 an • Paiement possible en plusieurs fois
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Zone & frais -->
+      <section class="zone-frais section">
+        <div class="container small-grid">
+          <div class="card domicile-card">
+            <h3>Zone de déplacement</h3>
+            <p>
+              Toulouse et alentours — déplacement inclus jusqu'à
+              <strong>10 km</strong>.
+            </p>
+          </div>
+
+          <div class="card domicile-card">
+            <h3>Frais de déplacement</h3>
+            <ul>
+              <li>Jusqu'à 10 km : <strong>+10 €</strong></li>
+              <li>10 km – 20 km : <strong>+20 €</strong></li>
+            </ul>
+          </div>
+
+          <div class="card domicile-card">
+            <h3>Horaires</h3>
+            <p>
+              Les massages à domicile peuvent être planifiés en dehors des
+              horaires du salon (à convenir).
+            </p>
+          </div>
+
+          <div class="card domicile-card">
+            <h3>Adresse salon</h3>
+            <p>
+              Si vous préférez venir : Rue Achille Viadieu — accessible en métro
+              (Palais de justice).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comment ça marche -->
+      <section class="how section">
+        <div class="container">
+          <h2>Comment ça se passe ?</h2>
+          <div class="how-grid">
+            <div class="how-step domicile-card">
+              <div class="how-icon">🧘‍♀️</div>
+              <h4>Je viens équipée</h4>
+              <p>
+                Table portable, serviettes, huiles & ambiance détente — rien à
+                préparer.
+              </p>
+            </div>
+            <div class="how-step domicile-card">
+              <div class="how-icon">🕯️</div>
+              <h4>Un espace cosy</h4>
+              <p>
+                Prévoyez un espace tranquille et environ 2m×2m pour installer la
+                table.
+              </p>
+            </div>
+            <div class="how-step domicile-card">
+              <div class="how-icon">📅</div>
+              <h4>Réservation simple</h4>
+              <p>
+                Réservez via Planity — confirmation et échange des détails si
+                besoin.
+              </p>
+            </div>
+            <div class="how-step domicile-card">
+              <div class="how-icon">💬</div>
+              <h4>Contact</h4>
+              <p>
+                Des questions ? Appel/Message : <strong>06 67 06 91 87</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA final -->
+      <section class="final-cta section domicile-card">
+        <div class="container centered">
+          <h3>Prête à vous offrir ce moment ?</h3>
+          <a
+            href="https://www.planity.com/kalmi-massages-31400-toulouse"
+            class="btn-book large"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Réserver sur Planity</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2025 Kalmi Massage - Tous droits réservés</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,265 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, #f8bfc5 0%, #f4a3ab 100%);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+
+.header .menu {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+/* Section Prestations */
+.prestations {
+  background: #fff;
+  padding: 6rem 1rem 4rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.prestations h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  color: #444;
+}
+
+.prestations h2 .accent {
+  color: #a6243d;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Grille prestations */
+.prestations-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .prestations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Carte prestation */
+.prestation {
+  background: #fff;
+  border: 2px solid #f8bfc5;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.prestation:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.prestation img {
+  display: block;
+  margin: 0 auto; /* centre horizontalement */
+  width: 100%;
+  max-width: 280px; /* largeur max uniforme */
+  height: 250px; /* même hauteur pour toutes */
+  object-fit: cover; /* recadrage élégant */
+  border-radius: 15px;
+  margin-bottom: 1.2rem;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.prestation img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.prestation h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 0.6rem;
+}
+
+.prestation p {
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+.prestation .prix {
+  color: #a6243d;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* Prestation spéciale */
+.prestation.special {
+  background: #f8bfc5;
+  border: 2px solid #a6243d;
+}
+
+/* Boutons */
+.btn-orange {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border: 2px solid #f5a623;
+  color: #f5a623;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-orange:hover {
+  background: #ffe2c6;
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #f8bfc5;
+  color: #a6243d;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* Animation apparition */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* On applique l'animation sur les cartes */
+.prestation {
+  opacity: 0; /* cachées au départ */
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Décalage progressif pour chaque carte */
+.prestation:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.prestation:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.prestation:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.prestation:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.prestation:nth-child(5) {
+  animation-delay: 1s;
+}
+.prestation:nth-child(6) {
+  animation-delay: 1.2s;
+}
+.prestation:nth-child(7) {
+  animation-delay: 1.4s;
+}
+.prestation:nth-child(8) {
+  animation-delay: 1.6s;
+}
+.prestation:nth-child(9) {
+  animation-delay: 1.8s;
+}
+.prestation:nth-child(10) {
+  animation-delay: 2s;
+}
+
+/* Intro prestations */
+.intro-presta {
+  background: #fff0f5; /* fond rose pâle sur toute la largeur */
+  padding: 4rem 1rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.intro-presta-container {
+  max-width: 800px;
+  margin: auto;
+  background: #ffe4ec; /* bloc central rose clair */
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.3s ease-in-out;
+}
+
+.intro-presta p {
+  color: #555;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Section Intro */
+.intro {
+  background: linear-gradient(180deg, #f8bfc5 0%, #f4a3ab 100%);
+  padding: 3rem 1.5rem;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 5rem auto 3rem; /* centrage avec marge en haut/bas */
+  text-align: center;
+  color: #333;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #a6243d;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
